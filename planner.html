@@ -1,0 +1,201 @@
+<html lang="en" class="no-js">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Codemind | Software Studio</title>
+    <link rel="shortcut icon" href="assets/favico.png">
+
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link href="css/tipuesearch.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="js/modernizr.js"></script>
+    <!-- Modernizr -->
+
+    <meta name="description" content="We are the link between a great idea and a great product. " />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Codemind | Software Studio" />
+    <meta property="og:url" content="www.codemind.co" />
+    <meta property="og:image" content="assets/logo-blue.jpg" />
+    <meta property="og:description" content="We are the link between a great idea and a great product." />
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <script src="//load.sumome.com/" data-sumo-site-id="aa476647954e64bb319882994618d994527cbf2b7eb40b2a6bfa042bdbad2bef" async="async"></script>
+    <script src="js/bootstrap-slider.js"></script>
+    <link rel="stylesheet" href="css/slider.css">
+    <script>
+    </script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+
+        $( function() {
+            $( "#slider-range-min" ).slider({
+                range: "min",
+                value: 50,
+                min: 1,
+                max: 100,
+                /*slide: function( event, ui ) {
+                    $( "#amount" ).val( "$" + ui.value );
+                } */
+                slide: function( event, ui ) {
+
+                    if( ui.value < 50 ){
+                        $("#stateText").text('Low')
+                    }
+
+                    else if( ui.value.isBetween(50, 80) ){
+                        $("#stateText").text('Intermediate')
+                    }
+                    else if ( ui.value > 80 ) {
+                        $("#stateText").text('Detailed')
+                    }
+                    else {
+                        $("#amount").val("$" + ui.value);
+                    }
+                },
+            });
+            $( "#amount" ).val( "$" + $( "#slider-range-min" ).slider( "value" ) );
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+<header class="cd-header">
+    <div id="cd-logo">
+        <a href="index.html"><img src="assets/logo2.png" alt="Logo">
+        </a>
+    </div>
+
+    <nav class="cd-primary-nav">
+        <ul class="">
+            <li><a href="index.html">Home</a>
+            </li>
+            <li><a href="#solutions">Solutions</a>
+            </li>
+            <li><a href="the-process.html">The Process</a>
+            </li>
+
+            <!--  <li><a href="#">Careers</a>
+             </li> -->
+            <li><a href="contact.html">Contact</a>
+            </li>
+            <li>
+                <a>
+                    <form action="search.html" id="demo-2">
+                        <input type="text" name="q" id="tipue_search_input" autocomplete="off" required="">
+                    </form>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- .cd-primary-nav -->
+</header>
+<! -- PART 1 -- >
+<div class="container demo-4">
+    <div id="large-header" class="large-header">
+        <div class="section">Planner</div>
+        <canvas id="demo-canvas" width="1366" height="327"></canvas>
+        <h1 class="main-title">
+            Let's make something great together.<br>
+            <span class="teaser-text">
+                    To start planning your project, please adjust level of details you want to enter.
+                </span>
+        </h1>
+        <div class="container center-block range-slider-one">
+            <p class="slider-section">Level of details</p>
+            <p>
+                <!-- <label for="amount">Maximum price:</label>
+                <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                < -->
+                <div id="stateText">Intermediate</div>
+            </p>
+            <div id="slider-range-min"></div>
+            <div class="slider-bcg">
+            </div>
+
+            <button class="left ghost-button">Continue</button>
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+
+<div class="container stack" id="stack">
+    <div class="right">
+        <h4> <img src="assets/icon-menu-dark.png"></h4>
+    </div>
+    <div class="left">
+        <h4> <img src="assets/img-logo-header-dark.png"></h4>
+    </div>
+    <div class="client-container">
+        <div class="left">
+            <div class="client-section">Client</div>
+        </div>
+        <div class="col-md-offset-0" style="padding-left:80px">
+        <div class="container col-md-12">
+        <div class="inputgroup col-md-6 col-xs-6">
+        <input type="text" name="" placeholder=" " required>
+        <div class="decoration">
+            <div class="bar">
+                <div class="reaction"></div>
+            </div>
+            <label>Name</label>
+            <p class="message">Invalid Name</p>
+        </div>
+    </div>
+        <div class="inputgroup col-md-6 col-xs-6">
+            <input type="text" name="" placeholder=" " required>
+            <div class="decoration">
+                <div class="bar">
+                    <div class="reaction"></div>
+                </div>
+                <label>E-mail</label>
+                <p class="message">Invalid E-mail</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container col-md-12">
+        <div class="inputgroup col-md-6 col-xs-6">
+            <input type="text" name="" placeholder=" " required>
+            <div class="decoration">
+                <div class="bar">
+                    <div class="reaction"></div>
+                </div>
+                <label>Phone</label>
+                <p class="message">Invalid Phone Number</p>
+            </div>
+        </div>
+        <div class="inputgroup col-md-6  col-xs-6">
+            <input type="text" name="" placeholder=" " required>
+            <div class="decoration">
+                <div class="bar">
+                    <div class="reaction"></div>
+                </div>
+                <label>Company</label>
+                <p class="message">Invalid Company</p>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
